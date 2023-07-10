@@ -1,0 +1,416 @@
+@use "sass:color";
+body {
+    min-height: 100vh;
+    //padding-bottom: 200px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.navbar-ly {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items : center;
+    background-color: $white !important;
+    .btn-ctn {
+        max-width: 400px;
+    }
+    padding-left: 120px;
+
+    .info-user {
+        font-size: 13px;
+        font-weight: bold;
+        & div {
+            text-align: center;
+        }
+    }
+}
+
+.container {
+    @media screen and (min-width:992px) {
+        max-width: 100%;
+    }
+}
+
+.med-brand, #med {
+    & > span {
+        font-size: 32px !important;
+        font-weight: bolder;
+        line-height: 40px;
+        &:last-child {
+            color : $primary-color;
+        }
+    }
+}
+
+.sup-ctn {
+    background: url("../image/karolina.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome {
+    padding:  0 3rem;
+    padding-top: 3rem;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: -3rem;
+}
+.banner-inscription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > section {
+        min-width: 800px;
+        max-width: 70%;
+        .content {
+
+            background: rgba(255, 255, 255, 0.8);
+        }
+    }
+    & > div {
+        position: relative;
+        width: 30%;
+        //margin-left: -15%;
+        margin-left: -30%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.banner-connexion {
+    flex-direction: row-reverse;
+    & > div {
+        // height: 70%;
+        width: 22%;
+        margin-left: unset;
+        margin-right: -15%;
+    }
+    .user-select {
+        display : flex;
+        justify-content: center;
+        align-items : center;
+        gap: 20px;
+        margin-bottom: 7px;
+        h4 {
+            width: fit-content;
+            text-align: center;
+            cursor: pointer;
+        }
+        .user-active {
+            border-bottom: 3px solid $primary-color;
+        }
+    }
+    #medecin-form {
+        display: none;
+    }
+}
+
+.home {
+    .img-service {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+    background-color: #accbc5b9;
+}
+
+// Navigation style
+.side-nav {
+    //position: fixed;
+    //top: 150px;
+    //left: 0;
+    //outline: 2px solid red;
+    ul {
+        li {
+
+        }
+    }
+}
+
+.other-side, .main-content {
+    //margin-left: 350px;
+    .section-title {
+        width: fit-content;
+        //border-bottom: 5px solid $primary-color;
+        color:  $primary-color;
+        margin-bottom: 10px;
+    }
+    & > .content {
+        table {
+            tr {
+                td {
+                    text-align: center;
+                }
+                &:nth-child(even) {
+                    background-color: $text-color-light-2;
+                }
+                &:first-child {
+                    td {
+                        h6 {
+                            color: $text-color-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main-content {
+    //outline: 2px solid blue;
+}
+
+// Services page
+.service-ctn {
+    .services-container {
+        .service-inst {
+            .match-height {
+                height: 300px;
+            }
+            .serv-head {
+                //outline: 1px solid red;
+                justify-content: space-between;
+                align-items : center;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+}
+
+// Service Each
+
+.service-inst {
+    .card {
+        $img-url : attr(data-img);
+        height: 300px;
+        overflow: hidden;
+        outline: 5px solid forestgreen;
+        align-items: center;
+        //content : $img-url;
+        //background: url($img-url);
+        .card-img-overlay {
+
+        }
+
+    }
+}
+
+.options {
+    width : 100%;
+    & h3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    & > div {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.calend-sup {
+    display: none;
+    margin-top: 30px;
+    width: 100%;
+    &-active {
+        display: unset;
+
+        & h3, h4 {
+            width: 100%;
+            text-align: left;
+            margin: 5px 0;
+        }
+
+        h3 {
+            width: fit-content;
+            border-bottom: 5px solid $primary-color;
+        }
+        h4 {
+            margin-top: 15px;
+        }
+    }
+
+    & > .content {
+
+    }
+}
+.calendar-container {
+    width: 100%;
+
+    & > div {
+        width: 100%;
+        height: 50px;
+        &:first-child {
+            background-color: $light;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        & > button {
+            outline: none;
+            border : none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            width: 25px;
+            background: transparent;
+            &:hover {
+                background: $primary-color;
+                color : $white;
+            }
+        }
+    }
+    .services-table {
+        thead {
+            color: $text-color-green;
+        }
+        tbody {
+            & > tr {
+                height: 250px;
+                &:last-child {
+                    height: 150px;
+                }
+
+                td {
+
+                    & > div {
+                        height: 50px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .hour-even {
+                        background-color: $text-color-light;
+                        //cursor : pointer
+                    }
+
+                    .hour-ctrl {
+                        cursor : pointer;
+                    }
+
+                    .hour-filled {
+                        background-color: $primary-color;
+                        color : $white;
+                    }
+                    .hour-filled-shade {
+                        background-color: rgba($primary-color, .7);
+                        color : $white;
+                    }
+                    .hour-gone {
+                        opacity: .3;
+                    }
+                }
+
+                &:nth-child(even) {
+                    background-color: unset;
+                }
+            }
+        }
+    }
+}
+
+
+.form-rdv {
+    display : none;
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    width : 70%;
+    transform : translate(-50%, -50%);
+    & .content {
+        background-color : $white;
+        & button {
+            outline: none;
+            background: transparent;
+        }
+    }
+    z-index : 1021;
+
+    .success-box {
+        display  : none;
+        &--active {
+            display: unset;
+        }
+    }
+    &--open {
+        display : block
+    }
+}
+
+.medecin-container {
+    & > div {
+        width: 100%;
+        height: 50px;
+        &:first-child {
+            background-color: $light;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        & > button {
+            outline: none;
+            border : none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            width: 25px;
+            background: transparent;
+            &:hover {
+                background: $primary-color;
+                color : $white;
+            }
+        }
+    }
+    table {
+        tbody {
+            .line-even {
+                background-color: $text-color-light;
+                //cursor : pointer
+            }
+            & > tr {
+                &:last-child {
+                    //height: 150px;
+                }
+
+                td {
+
+                    & > div {
+                        height: 50px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+.sup-container {
+    margin-bottom: 100px;
+}
+
+.btn-action {
+    border: none;
+    outline: none;
+}
